@@ -1,0 +1,39 @@
+ANTES DE CLONAR REPOSITORIO, SEGUIR OS PASSOS ABAIXO:
+
+
+1. baixar o NODE:
+  https://nodejs.org/en/
+
+2. Instalar Bootstrap Global
+  
+Abrir CMD e digitar comando: npm install bootstrap
+
+3. Instalar Gulp Global
+  Abrir CMD e digitar comando: 
+npm install --global gulp-cli
+
+4. Instalar SASS Global
+  
+Abrir CMD e digitar comando: npm install -g sass
+ 
+ 
+ 
+ 
+
+agora pode clonar repositorio e depois de clonar repositorio.
+ seguir os passos:
+ 
+ 
+dentro do CMD abrir pasta do projeto e digitar comando:
+ 
+
+ npm install gulp browser-sync gulp-sass --save-dev
+ 
+ 
+depois baixar bootstrap jquery e popper
+ 
+ 
+dentro do CMD abrir pasta do projeto e digitar comando:
+ 
+ 
+npm install bootstrap jquery popper.js --save

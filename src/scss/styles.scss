@@ -1,0 +1,23 @@
+//declaração das variaveis
+$bg-color: #E6E8E6;
+
+//importação do bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body{
+    background-image: linear-gradiente($bg-color, white);
+} 
+
+.img-200-200 {
+    width: 150px; // a altura se adequa proporcionalmente da immagem dentro do card pagina home
+    margin-left: 60px;    
+    margin-top: 10px;
+}
+ 
+h1{
+    text-align: center;
+}
+
+
+
+

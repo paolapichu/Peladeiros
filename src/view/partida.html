@@ -32,7 +32,7 @@
                         <a class="nav-link  active" href="partida.html">Partidas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sair</a>
+                        <a class="nav-link" href="login.html">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -43,9 +43,8 @@
                 Partida</button>
             <button type="button" class="btn btn-warning mt-2" data-toggle="modal" data-target="#verPartidas">Ver
                 Partidas</button>
-            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#pesquisarPartida">Pesquisar
-                Partida</button>
-            <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#criarTime">Criar Time</button>
+            <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#excluirPartida">Excluir
+				Partida</button>
         </div>
         <!-- MODAL CRIAR PARTIDA -->
         <div class="modal" id="criarPartida" tabindex="-1" role="dialog">
@@ -131,7 +130,7 @@
             </div>
         </div>
 
-        <!-- MODAL CRIAR VER PARTIDAS -->
+        <!-- MODAL VER PARTIDAS -->
         <div class="modal" id="verPartidas" tabindex="-1" role="dialog">
             <div class="modal-dialog w-75" role="document">
                 <div class="modal-content">
@@ -144,7 +143,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for=" inputPosicao" class="mr-2">Jogadores</label>
+                                <label for=" inputJogadores" class="mr-2">Jogadores</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
@@ -172,86 +171,53 @@
                     </div>
                 </div>
             </div>
+		</div>
 
-            <!-- MODAL PESQUISAR PARTIDA -->
-            <div class="modal" id="pesquisarPartida" tabindex="-1" role="dialog">
-                <div class="modal-dialog w-75" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Pesquisar Partida</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group mt-5">
-                                    <label for=" inputNome">Pesquisar</label>
-                                    <input type="text" class="form-control-small mb-3 border border-success text-center"
-                                        id="inputNome" value="Peladeiro" disable>
-                                </div>
-                                <div class="form-group">
-                                    <label for=" inputPrxNivel" class="mr-2">Partida</label>
-                                    <input type="text" class="form-control-small mb-3 border border-success text-center"
-                                        id="inputPrxNivel" value="Peladeiros">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer ml-auto">
-                            <button type="button" class="btn btn-danger float-left" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-warning">Excluir</button>
-                        </div>
+            <!-- MODAL EXCLUIR PARTIDA -->
+            <div class="modal" id="excluirPartida" tabindex="-1" role="dialog">
+            <div class="modal-dialog w-75" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Excluir Partida</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-            </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for=" inputPartida" class="mr-2">Partidas</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Peladeiros
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Amigos Ambev
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Amigos Coca-Cola
+                                    </label>
+                                </div>
+                            </div>
+                          
+						</form>
+						Deseja realmente excluir essa(s) partida?
+					</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary">Sim</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+						</div>
+                 </div>
+             </div>
+			</div> <!--/.modal -->
 
-            <!-- MODAL CRIAR TIME -->
-            <div class="modal" id="criarTime" tabindex="-1" role="dialog">
-                <div class="modal-dialog w-75" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Criar Time</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group mt-5">
-                                    <label for=" inputNome">Nome Time</label>
-                                    <input type="text" class="form-control-small mb-3 border border-success text-center"
-                                        id="inputNome" value="Peladeiro F.C" disable>
-                                </div>
-                                <div class="form-group">
-                                    <label for=" inputPosicao" class="mr-2">Jogadores</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            José
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            João
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Godofredo
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="modal-footer ml-auto">
-                                    <button type="button" class="btn btn-danger float-left" data-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Salvar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="../js/jquery.min.js"></script>
